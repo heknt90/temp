@@ -1,0 +1,49 @@
+.dog {
+    position: relative;
+    width: 400px;
+    height: 250px;
+    padding:50px 100px 50px 50px;
+    background-image: url(images/cloud2.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.dog::before {
+    position: absolute;
+    right: -120px;
+    bottom: -120px;
+    content: '';
+    display: block;
+    width: 200px;
+    height: 150px;
+    background-image: url(images/dog2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.animation-greetings {
+    animation: dog-greetings 1s;
+}
+
+@keyframes dog-greetings {
+    0%, 100% { transform: rotate(0deg);}
+
+    10%, 50%, 90% {
+        transform: rotate(3deg);
+    }
+
+    20%, 60% {
+        transform: rotate(-4deg);
+    }
+
+    30%, 70% {
+        transform: rotate(1deg);
+    }
+
+    40%, 80% {
+        transform: rotate(-3deg);
+    }
+
+
+
+}
